@@ -1,0 +1,161 @@
+/* Import Poppins font for that clean look */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Main Background */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fdfdfd; /* Very light background */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* The Central Card (White Left + Blue Right) */
+.cardContainer {
+  display: flex;
+  width: 900px;
+  max-width: 90%;
+  height: 550px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Soft shadow like the screenshot */
+  overflow: hidden;
+}
+
+/* --- LEFT SIDE: THE FORM --- */
+.cardContainer__left {
+  flex: 1.2; /* Slightly wider */
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center content horizontally */
+}
+
+/* "Sign Up" Heading */
+.cardleft__heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #000;
+  text-align: center;
+}
+
+/* Form Inputs Container */
+.inputContainers {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Row for Name/Username side-by-side */
+.inputRow {
+  display: flex;
+  gap: 15px;
+}
+
+/* Input Fields */
+.inputField {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0; /* Light gray border */
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background-color: white;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  transition: border-color 0.2s;
+}
+
+.inputField:focus {
+  border-color: #0056b3; /* Blue highlight on focus */
+}
+
+.inputField::placeholder {
+  color: #999;
+}
+
+/* Submit Button (Gray "Sign Up") */
+.buttonWithOutline {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #e0e0e0; /* Light gray button background */
+  color: #333;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  user-select: none;
+  font-size: 1rem;
+}
+
+.buttonWithOutline:hover {
+  background-color: #d0d0d0;
+}
+
+/* --- RIGHT SIDE: THE BLUE PANEL --- */
+.cardContainer__right {
+  flex: 0.8; /* Slightly narrower */
+  background-color: #004aad; /* The specific dark blue from your screenshot */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.cardContainer__right p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+/* The White "Sign In" Button on the Blue Side */
+.cardContainer__right .buttonWithOutline {
+  background-color: white;
+  color: #000;
+  border: none;
+  width: 150px; /* Fixed width for the pill button */
+  margin-top: 5px;
+}
+
+.cardContainer__right .buttonWithOutline:hover {
+  background-color: #f0f0f0;
+}
+
+/* Google Button Spacing */
+.googleBtnContainer {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .cardContainer {
+    flex-direction: column-reverse; /* Put the blue part on top or bottom */
+    height: auto;
+    width: 95%;
+  }
+
+  .cardContainer__left {
+    padding: 30px;
+  }
+
+  .cardContainer__right {
+    padding: 30px;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .inputRow {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

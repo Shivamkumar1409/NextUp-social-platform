@@ -1,0 +1,42 @@
+# --- GLOBAL DEPENDENCIES ---
+node_modules/
+package-lock.json # Optional: Keep this if you want to lock versions, ignore if you face conflicts
+yarn.lock
+pnpm-lock.yaml
+
+# --- ENVIRONMENT VARIABLES (CRITICAL) ---
+# Blocks .env files in ALL folders (Root, Backend, and Frontend)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+*.env.*
+
+# --- BACKEND SPECIFIC ---
+backend/uploads/
+backend/coverage/
+backend/logs/
+
+# --- FRONTEND SPECIFIC (Next.js) ---
+.next/
+out/
+build/
+dist/
+.vercel/
+*.tsbuildinfo
+next-env.d.ts
+
+# --- SYSTEM & IDE FILES ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- LOGS & DEBUG ---
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log

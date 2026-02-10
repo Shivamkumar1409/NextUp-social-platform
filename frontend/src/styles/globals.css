@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* Use Poppins as the main font, with sans-serif as a backup */
+  font-family: 'Poppins', sans-serif;
+  
+  /* A very light background color helps the white Login Card stand out */
+  background-color: #f8f9fa; 
+  color: #333;
+}
